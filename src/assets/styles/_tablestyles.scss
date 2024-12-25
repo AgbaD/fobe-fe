@@ -1,0 +1,147 @@
+@import './admin';
+
+$main-font-family: Inter, sans-serif;
+
+%view_styles {
+  float: right;
+  color: #00b8bf;
+  margin-bottom: 1rem;
+}
+
+%table-data-styles {
+  padding: 0.625rem;
+  color: #1c1c1c;
+  font-weight: 400;
+  font-family: $main-font-family;
+}
+
+%table-section-styles {
+  margin-top: 1.25rem;
+  border: 1px solid #f4f4f6;
+  border-radius: 0.7rem;
+  background-color: #ffffff;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+}
+
+%table-heading {
+  font-family: $main-font-family;
+  font-weight: 700;
+  font-size: 1.375rem;
+  color: #425669;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+}
+
+%striped-table {
+  margin-top: 1.4rem;
+  width: 100%;
+  border-collapse: collapse;
+
+  thead,
+  tbody {
+    tr {
+      &:first-child,
+      &.table-header {
+        background-color: #f9fafa;
+        th {
+          font-family: $main-font-family;
+          font-weight: 500;
+          font-size: 1rem;
+          color: #425669;
+          padding: 1.25rem 0.625rem;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        @extend %table-data-styles;
+        padding: 1.25rem 0.625rem;
+        text-align: left;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:nth-child(odd):not(:first-child) {
+        background-color: #f9fafa;
+      }
+    }
+  }
+
+  .view-button {
+    background-color: #fff;
+    color: #6b7280;
+    padding: 0.4375rem 0.9rem;
+    border-radius: 0.2rem;
+    border: 1px solid #f0ecf5;
+    font-family: $main-font-family;
+    font-weight: 400;
+  }
+
+  .status-button {
+    border: none;
+    padding: 0.3125rem 0.625rem;
+    border-radius: 0.3125rem;
+    cursor: pointer;
+    font-family: $main-font-family;
+    font-weight: 500;
+
+    &.complete {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    &.pending {
+      background-color: #af8d29;
+      color: white;
+    }
+  }
+}
+
+@media (max-width: 56.25rem) {
+  .table-section {
+    overflow-x: auto;
+
+    .striped-table {
+      min-width: 43.75rem; // 700px
+
+      thead,
+      tbody {
+        tr {
+          th,
+          td {
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 37.5rem) {
+  .table-section {
+    .view_all {
+      margin: 1rem 0;
+    }
+
+    .striped-table {
+      thead,
+      tbody {
+        tr {
+          th,
+          td {
+            padding: 1rem 0.5rem;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+}

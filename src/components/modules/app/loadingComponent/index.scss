@@ -1,0 +1,62 @@
+@keyframes shimmer {
+    0% {
+      background-position: -468px 0;
+    }
+    100% {
+      background-position: 468px 0;
+    }
+  }
+  
+  .loading {
+    .loading-card {
+      background-color: #f4f4f4 !important;
+      
+      .icon-placeholder {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(to right, #f6f7f8 8%, #edeef1 38%, #f6f7f8 54%);
+        background-size: 1000px 640px;
+        animation: shimmer 1.5s linear infinite forwards;
+        margin-bottom: 1rem;
+      }
+  
+      .content-placeholder {
+        .title-placeholder {
+          height: 14px;
+          width: 80%;
+          margin-bottom: 0.5rem;
+          background: linear-gradient(to right, #f6f7f8 8%, #edeef1 38%, #f6f7f8 54%);
+          background-size: 1000px 640px;
+          animation: shimmer 1.5s linear infinite forwards;
+        }
+  
+        .value-placeholder {
+          height: 22px;
+          width: 60%;
+          background: linear-gradient(to right, #f6f7f8 8%, #edeef1 38%, #f6f7f8 54%);
+          background-size: 1000px 640px;
+          animation: shimmer 1.5s linear infinite forwards;
+        }
+      }
+    }
+  }
+  
+  .table-loading {
+    .heading-placeholder {
+      height: 22px;
+      width: 200px;
+      margin-bottom: 1rem;
+      background: linear-gradient(to right, #f6f7f8 8%, #edeef1 38%, #f6f7f8 54%);
+      background-size: 1000px 640px;
+      animation: shimmer 1.5s linear infinite forwards;
+    }
+  
+    .loading-cell {
+      height: 20px;
+      background: linear-gradient(to right, #f6f7f8 8%, #edeef1 38%, #f6f7f8 54%);
+      background-size: 1000px 640px;
+      animation: shimmer 1.5s linear infinite forwards;
+      padding: 1rem !important;
+    }
+  }

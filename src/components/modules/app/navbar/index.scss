@@ -1,0 +1,220 @@
+@import "../../../../assets/styles/mixins.scss";
+
+.nav-bar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  @include mobile(745px) {
+    border-bottom: 1px solid var(--border2);
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-logo {
+      @include mobile(600px) {
+        width: 160px;
+        height: 36px;
+      }
+    }
+
+    &__menu {
+      display: none;
+
+      @include mobile(745px) {
+        border-left: 1px solid var(--border2);
+        display: block;
+        position: absolute;
+        padding: 0 18px;
+        height: 100%;
+        right: 0;
+
+        .hamburger {
+          position: relative;
+          height: 16px;
+          width: 18px;
+
+          span {
+            display: block;
+            height: 2px;
+            width: 100%;
+            background: var(--dark);
+            position: absolute;
+            transition: 0.3s ease;
+            border-radius: 100vh;
+
+            &:nth-child(1) {
+              top: 0;
+            }
+            &:nth-child(2) {
+              top: 50%;
+              transform: translate(0, -50%);
+            }
+            &:nth-child(3) {
+              bottom: 0;
+            }
+          }
+        }
+
+        &.open {
+          .hamburger {
+            span {
+              &:nth-child(1) {
+                top: 50%;
+                transform: translate(0, -50%) rotate(45deg);
+              }
+              &:nth-child(2) {
+                opacity: 0;
+              }
+              &:nth-child(3) {
+                bottom: 50%;
+                transform: translate(0, 50%) rotate((-45deg));
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+
+      @include mobile(745px) {
+        position: fixed;
+        flex-direction: column;
+        background: var(--white);
+        gap: 40px;
+        top: -100vh;
+        left: 0;
+        width: 100%;
+        padding: 32px 20px;
+        transition: 0.4s ease;
+        min-height: 100vh;
+        pointer-events: none;
+        opacity: 0;
+        z-index: 6;
+        align-items: flex-start;
+
+        &.active {
+          pointer-events: unset;
+        }
+      }
+
+      li {
+        .nav-link {
+          &.active::after,
+          &:hover::after {
+            content: "";
+            width: 100%;
+            height: 2px;
+            display: flex;
+            background: var(--dark);
+
+            @include mobile(745px) {
+              display: none;
+            }
+          }
+        }
+
+        @include mobile(745px) {
+          width: 100%;
+        }
+        a {
+          font-size: 16px;
+          line-height: 20px;
+          font-weight: 500;
+
+          @include mobile(745px) {
+            width: 100%;
+          }
+        }
+      }
+
+      .user-container {
+        position: relative;
+        z-index: 5;
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          // justify-content: center;
+          // border-radius: 100vh;
+          // width: 48px;
+          // height: 48px;
+          // background-color: var(--dark);
+          cursor: pointer;
+
+          &__icon {
+            width: 28px;
+            height: 28px;
+          }
+
+          p {
+            font-weight: 500;
+            color: var(--dark);
+          }
+        }
+
+        .nav-dropdown {
+          position: absolute;
+          right: 0;
+          top: 50px;
+
+          &.show {
+            display: block;
+          }
+
+          &.hide {
+            display: none;
+          }
+
+          &__item {
+            background: var(--white);
+            border: 1px solid var(--border);
+            padding-top: 8px;
+            padding-bottom: 8px;
+            width: 145px;
+            padding-left: 19px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+
+            &:hover {
+              background: var(--secondary);
+            }
+          }
+        }
+
+        .dropdown-account {
+          border-radius: 5px 5px 0 0;
+          border-bottom: 0;
+        }
+
+        .dropdown-logout {
+          border-radius: 0px 0px 5px 5px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .active {
+      top: 64px;
+      opacity: 1;
+    }
+  }
+}
+
+.border {
+  border-bottom: 1px solid var(--border2);
+}
