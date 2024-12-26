@@ -2,52 +2,6 @@
 @import '../../../../assets/styles/admin';
 @import '../../../../assets/styles/mixins.scss';
 
-
-.dashboard-stats {
-  // display: flex;
-  justify-content: space-between;
-  font-family: 'Inter', sans-serif;
-  .stat {
-    background-color: #f4f4f4;
-    padding: 20px;
-    flex: 1;
-    margin: 0 10px;
-    text-align: center;
-    border-radius: 5px; 
-
-    &:first-child {
-      margin-left: 0;
-    } 
- 
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-  .card-container {
-    .statistics-card {  
-      &__content {
-        .value {
-          font-size: 22px;
-          font-family: $main-font-family;
-          font-weight: 700;
-        }
-      }
-      
-      .card {
-        .title {
-          font-family: $main-font-family;
-          font-weight: 500;
-          font-size: 14px;
-          color: #425669;
-        }
-        
-      }
-    }
-   
-  }
-}
-
-
 .table-section {
   @extend %table-section-styles;
 
@@ -80,24 +34,6 @@
           @extend %table-data-styles;
         }
       }
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .dashboard-stats {
-    flex-direction: column;
-
-    .stat {
-      margin: 10px 0;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .dashboard-stats {
-    .stat {
-      padding: 15px;
     }
   }
 }

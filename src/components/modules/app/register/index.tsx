@@ -2,7 +2,7 @@ import { useState } from "react";
 import BaseButton from "../../ui/button";
 import BaseInput from "../../ui/input";
 import { Icon } from "../../ui/Icon";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./index.scss";
 import * as Yup from "yup";
 import useForm from "../../../hooks/useForm";
@@ -100,6 +100,14 @@ export default function Register() {
               Sign up
             </BaseButton>
           </form>
+
+          <div className="forget-password">
+            <p className="text--2xs">
+              {" "}
+              <span>Already have an account?</span>{" "}
+              <Link to="/login">Login</Link>
+            </p>
+          </div>
         </div>
       </div>
     </div>

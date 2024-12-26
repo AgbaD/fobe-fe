@@ -41,7 +41,7 @@ export default function Login() {
       const [res, err] = await loginRequest(data);
       if (err) {
         toast.error(err.message);
-      } // display error with toast
+      } 
 
       if (res) {
         setToken(res.data.token);

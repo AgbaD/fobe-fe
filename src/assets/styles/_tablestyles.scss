@@ -2,12 +2,6 @@
 
 $main-font-family: Inter, sans-serif;
 
-%view_styles {
-  float: right;
-  color: #00b8bf;
-  margin-bottom: 1rem;
-}
-
 %table-data-styles {
   padding: 0.625rem;
   color: #1c1c1c;
@@ -72,16 +66,6 @@ $main-font-family: Inter, sans-serif;
         background-color: #f9fafa;
       }
     }
-  }
-
-  .view-button {
-    background-color: #fff;
-    color: #6b7280;
-    padding: 0.4375rem 0.9rem;
-    border-radius: 0.2rem;
-    border: 1px solid #f0ecf5;
-    font-family: $main-font-family;
-    font-weight: 400;
   }
 
   .status-button {

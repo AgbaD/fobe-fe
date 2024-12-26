@@ -4,7 +4,6 @@ import { useAuthContext } from "../../../context/authContext";
 import { TableLoadingSkeleton } from "../loadingComponent";
 import "../../../../assets/styles/_tablestyles.scss";
 import "./index.scss";
-import "../../../../assets/styles/statisticsCard.scss";
 import useRequest from "../../../hooks/useRequest";
 import { getTransactions } from "../../../../api/transaction";
 import toast from "react-hot-toast";

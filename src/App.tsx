@@ -11,6 +11,7 @@ import Login from "./components/modules/app/login";
 import Dashboard from "./components/modules/app/dashboard";
 
 import { useAuthContext } from "./components/context/authContext";
+import Wallet from "./components/modules/app/wallet";
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
         {
         isAuthenticated ? <>  
         <Route path="/" element={<Dashboard />} />    
-        {/* <Route path="/wallet" element={<Wallet />} /> */}
+        <Route path="/wallet" element={<Wallet />} />
         <Route path="/login" element={<Redirect to="/" />} />
         </> : 
         <Route path="/login" element={<Login />} /> 

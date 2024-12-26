@@ -46,6 +46,11 @@ export default function NavBar({ hasBorder }: NavBarProps) {
         </button>
         <ul className={`nav-bar__content__links ${openMenu ? "active" : ""}`}>
           <li>
+            <NavLink className="nav-link" to="/">
+              Dashboard
+            </NavLink>
+          </li>
+          <li>
             <NavLink className="nav-link" to="/wallet">
               Wallet
             </NavLink>

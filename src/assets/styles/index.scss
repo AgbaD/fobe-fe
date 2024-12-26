@@ -1,7 +1,7 @@
 @import "./mixins.scss";
 
 :root {
-  --dark: #0e2557;
+  --dark: #0c0d0f;
   --secondary: #f2f7ff;
   --white: #ffffff;
   --text: #8c9298;
@@ -160,82 +160,8 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.subtitle {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0.8px;
-  color: #3a5899;
-  text-transform: uppercase;
-}
-
-.gradient-title {
-  display: flex;
-  margin: 20px auto 0;
-  text-align: center;
-  max-width: 623px;
-
-  @include mobile(600px) {
-    margin-top: 12px;
-    margin-bottom: 30px;
-  }
-}
-
-.gradient-subtitle {
-  display: flex;
-  justify-content: center;
-  color: #3a5899;
-  font-weight: 600;
-  text-align: center;
-}
-
-.lists {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 30px;
-
-  &__list {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-
-    .tick-icon {
-      width: 20px;
-      height: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 100vh;
-      flex-shrink: 0;
-      transform: translateY(3px);
-
-      &--gradient {
-        @extend .tick-icon;
-        background: linear-gradient(
-          265.33deg,
-          #81e8ff -3.78%,
-          #c7f6dc 85.48%,
-          #c7f6dc 96.74%
-        );
-        color: var(--dark);
-      }
-
-      &--black {
-        @extend .tick-icon;
-        background: var(--dark);
-        color: var(--white);
-
-        p {
-          color: var(--white);
-        }
-      }
-    }
-  }
-}
-
 .bg-gradient {
-  background: linear-gradient(265.33deg, #d6f5fc 16.76%, #e6faf4 104.26%);
+  background: #151313;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -248,10 +174,3 @@ input::-webkit-inner-spin-button {
   border-bottom: 1px solid var(--border2);
 }
 
-.underline {
-  text-decoration: underline;
-}
-
-.card-image {
-  max-width: 138px;
-}
