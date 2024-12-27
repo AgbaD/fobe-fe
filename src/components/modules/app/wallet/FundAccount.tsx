@@ -72,7 +72,7 @@ const FundWalletModal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
       <div className="wallet-modal-content">
         <div className="wallet-modal-header">
           <div className="wallet-modal-header-text">
-            <h3>Transfer Funds</h3>
+            <h3>Fund Account</h3>
           </div>
           <button className="wallet-modal-close" onClick={onClose}>
             <Icon name="close" />
